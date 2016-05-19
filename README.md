@@ -1,4 +1,19 @@
-# Parallel-Spectral-Clustering-on-CUDA
+# Parallel Spectral Clustering on GPU-CPU Platforms
 
-## abc
-aaa
+## Introduction
+##
+
+This software package is 
+
+## Installation
+
+## Usage
+
+## Dataset
+
+
+## Examples
+
+
+## Matlab and Python Comparison
+
