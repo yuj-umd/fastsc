@@ -16,5 +16,5 @@ This software package is
 ## Examples
 
 
-## Matlab and Python Comparison
+## Matlab and Python Benchmarks
 
