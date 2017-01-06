@@ -3,17 +3,21 @@
 ## Introduction
 ##
 
-This software package provides a fast implementation of spectral clustering 
+This software package provides a fast implementation of spectral clustering on GPU and CPU platforms. This work is published on IPDPS 2016 PCO workshop titled as "A high performance implementation of spectral clustering on cpu-gpu platforms". 
 
-## Installation
-The implementation package is based on the 
+Spectral clustering is a computationally expensive . Our implementation utilizes the existing 
+The implementation is primarily based on the ARPACK++ eigensolver and the k-means 
+
+## Install
+
+### Setup ARPACK++ Environment
+First 
+
+
 
 ## Usage
 
-## Dataset
-
-
-## Examples
+## Datasets
 
 
 ## Matlab and Python Benchmarks
