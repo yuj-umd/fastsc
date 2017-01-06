@@ -3,7 +3,7 @@
 ## Introduction
 ##
 
-This software package provides a fast implementation of spectral clustering on GPU and CPU platforms. This work is published on IPDPS 2016 PCO workshop titled as "A high performance implementation of spectral clustering on cpu-gpu platforms" authored by Yu Jin and Joseph F. JaJa. If you use the software in your applications, please cite the paper as,
+This software package provides a fast implementation of spectral clustering on GPU and CPU platforms. This work is published on IPDPS 2016 workshop titled as "A high performance implementation of spectral clustering on cpu-gpu platforms" authored by Yu Jin and Joseph F. JaJa. If you use the software in your applications, please cite the paper as,
 
 *
 @inproceedings{jin2016,  
@@ -32,8 +32,10 @@ CUDA
 First download ARPACK++ package from https://github.com/m-reuter/arpackpp
 
 ```
+$ git clone https://github.com/yuj-umd/arpackpp.git
 $ cd arpackpp
 ```
+
 Install the libraries
 
 ```
