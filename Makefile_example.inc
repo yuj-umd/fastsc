@@ -73,15 +73,15 @@ CHOLMOD_LIB  = $(SUITESPARSE_DIR)/CHOLMOD/Lib/libcholmod.a \
 # For cholmod need additional headers:
 CHOLMOD_INC  = -I$(SUITESPARSE_DIR)/CHOLMOD/Include -I$(SUITESPARSE_DIR)/SuiteSparse_config
 
-
+#############################################################################
+# Change CPP configuration. 
 # Defining g++ flags and directories.
 
 # CPP_WARNINGS = -fpermissive 
 CPP_WARNINGS = -Wall
 CPP_DEBUG    = -g
 CPP_OPTIM    = -O
-#############################################################################
-# Change configuration. 
+
 # If nvcc is used, no pthread
 #CPP_LIBS     = -pthread
 CPP_LIBS     =
