@@ -17,7 +17,7 @@ CPP          = g++
 # SUPERLU_DIR and UMFPACK_DIR must be set to ARPACKPP_INC.
 
 #############################################################################
-# Change library path here
+# Change directory path here
 #ARPACKPP_DIR = $(HOME)/arpack++
 #ARPACKPP_DIR = ../../..
 ARPACKPP_DIR = $(HOME)/arpackpp
@@ -38,7 +38,9 @@ UMFPACK_DIR  = $(ARPACKPP_INC)
 # fortran and c++ code using gnu g++ and f77 compiler under linux.
 # Other libraries should be defined if the user intends to compile
 # arpack++ on another environment.
-
+ 
+#############################################################################
+# Change library path here
 ARPACK_LIB   = $(ARPACKPP_DIR)/external/libarpack.a
 LAPACK_LIB   = 
 SUPERLU_LIB  = $(ARPACKPP_DIR)/external/libsuperlu.a
@@ -79,7 +81,7 @@ CPP_WARNINGS = -Wall
 CPP_DEBUG    = -g
 CPP_OPTIM    = -O
 #############################################################################
-# A little change. 
+# Change configuration. 
 # If nvcc is used, no pthread
 #CPP_LIBS     = -pthread
 CPP_LIBS     =
