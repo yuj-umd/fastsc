@@ -16,13 +16,15 @@ CPP          = g++
 # ARPACKPP_INC is the directory that contains all arpack++ header files.
 # SUPERLU_DIR and UMFPACK_DIR must be set to ARPACKPP_INC.
 
+#############################################################################
 #ARPACKPP_DIR = $(HOME)/arpack++
 #ARPACKPP_DIR = ../../..
-ARPACKPP_DIR = /fs/nara-scratch/NKI/cuda/kmeans/arpackpp-master
+ARPACKPP_DIR = $(HOME)/arpackpp
 ARPACKPP_INC = $(ARPACKPP_DIR)/include
 #SUPERLU_DIR  = $(ARPACKPP_INC)
-SUPERLU_DIR  = /fs/nara-scratch/NKI/cuda/kmeans/arpackpp-master/external/SuperLU
+SUPERLU_DIR  = $(ARPACKPP_DIR)/external/SuperLU
 UMFPACK_DIR  = $(ARPACKPP_INC)
+#############################################################################
 
 # Defining ARPACK, LAPACK, UMFPACK, SUPERLU, BLAS and FORTRAN libraries.
 # See the arpack++ manual or the README file for directions on how to 
@@ -36,16 +38,21 @@ UMFPACK_DIR  = $(ARPACKPP_INC)
 # Other libraries should be defined if the user intends to compile
 # arpack++ on another environment.
 
-ARPACK_LIB   = /fs/nara-scratch/NKI/cuda/kmeans/arpackpp-master/external/libarpack.a
+#############################################################################
+# Change library path here
+
+ARPACK_LIB   = $(ARPACKPP_DIR)/external/libarpack.a
 LAPACK_LIB   = 
-SUPERLU_LIB  = /fs/nara-scratch/NKI/cuda/kmeans/arpackpp-master/external/libsuperlu.a
-BLAS_LIB     = /fs/nara-scratch/NKI/cuda/kmeans/arpackpp-master/external/libopenblas.a
+SUPERLU_LIB  = $(ARPACKPP_DIR)/external/libsuperlu.a
+BLAS_LIB     = $(ARPACKPP_DIR)/external/libopenblas.a
 FORTRAN_LIBS = -lgfortran
 
 # SuiteSparse contains the UMFPACK and CHOLMOD code. To link examples against 
 # these, set the SUITESPARSE_DIR to point to your installation:
 #SUITESPARSE_DIR = $(ARPACKPP_DIR)/../SuiteSparse
+
 SUITESPARSE_DIR = $(ARPACKPP_DIR)/external/SuiteSparse
+#############################################################################
 
 UMFPACK_LIB  = $(SUITESPARSE_DIR)/UMFPACK/Lib/libumfpack.a  \
  $(SUITESPARSE_DIR)/CHOLMOD/Lib/libcholmod.a \
@@ -73,10 +80,12 @@ CHOLMOD_INC  = -I$(SUITESPARSE_DIR)/CHOLMOD/Include -I$(SUITESPARSE_DIR)/SuiteSp
 CPP_WARNINGS = -Wall
 CPP_DEBUG    = -g
 CPP_OPTIM    = -O
-# If nvcc is used, then no pthread
+#############################################################################
+# If nvcc is used, no pthread
 #CPP_LIBS     = -pthread
 CPP_LIBS     =
 CPP_INC      = 
+#############################################################################
 
 CPP_FLAGS    = $(CPP_DEBUG) -D$(PLAT) -I$(ARPACKPP_INC) -I$(CPP_INC) \
                $(CPP_WARNINGS)
