@@ -23,7 +23,7 @@ If you use the software in your applications, please cite the paper as
 
 Spectral clustering is one of the most popular clustering algorithms for finding structural communities in graphs. However, the running time of the algorithm is usually quite long as it involves very expensive numerical operations, i.e. finding the smallest few eigenvectors of a real symmetric matrix. 
 
-In this package, we provides a fast implementation of the spectral clustering algorithm which is significantly faster than other software packages such as Matlab and Python. As far as we know, our implementation is also the fastest implementation available in the open source community. 
+In this package, we provides a fast implementation of the spectral clustering algorithm which is significantly faster than using other CPU-based software packages such as Matlab and Python. As far as we know, our implementation is also the fastest implementation available in the open source community. 
 
 The implementation contains three parts:
 
