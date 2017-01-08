@@ -55,7 +55,7 @@ $ ./install-suitesparse.sh
 ```
 Change the directory and library path in Makefile.inc, as instructed in Makefile_example.inc.
 
-### Spectral clustering installation
+### fastsc installation
 Check out the code from https://github.com/yuj-umd/fastsc
 
 ```
@@ -71,19 +71,23 @@ $ ./spectral_clustering input_file_name n k output_file_name
 ```
 
 ## Usage
-The software is working by running 
+The program format is 
 ```
 $ ./spectral_clustering input_file_name n k output_file_name
 ```
 
-The input file contains the edge list for the unweighted and undirected graph. 
-Two examples are contained in folder Dataset.
+The input file contains the graph information represented as edge list.
+By default, the program supports unweighted graphs where each row contains the two node indices. It is easy to adapt the code for weighted graphs and other graph representations. 
 
-## Datasets
-FacebookG
+n is the total number of nodes and k is the desired number of clusters.
+The graph nodes are indexed from 0 to n-1 and there are NO isolated nodes.
 
+output file will contain the node ID and the corresponding label.
+
+Two input examples are contained in Dataset folder.
 
 ## Matlab and Python Benchmarks
+The Benchmark folder contains Matlab code with the same function. Our implementation is significantly faster than the naive Matlab implementation especially for large-scale problems. 
 
 
 ## Reference
