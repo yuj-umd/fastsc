@@ -1,4 +1,4 @@
-# Parallel Spectral Clustering on GPU-CPU Platforms
+# A Fast Implementation of Spectral Clustering on GPU-CPU Platforms
 
 ## Introduction
 ##
@@ -27,7 +27,8 @@ The implementation contains three parts:
 - Computet the first k eigenvectors based on arpackpp package and CUDA libraries.
 - Apply k-means algorithm on rows of the k eigenvectors. 
 
-Each part can be separated for individual functional usage. Detailed comments are provided in the code.
+Each part can be easily divided for individual functional usage. 
+If you have trouble working with the software package, please contact Yu Jin (yuj AT umd.edu).
 
 
 ## Installation
@@ -54,8 +55,12 @@ $ ./install-suitesparse.sh
 Change the directory and library path in Makefile.inc, as instructed in Makefile_example.inc.
 
 ### Spectral clustering installation
-Check out the code from https://github.com/yuj-umd/Parallel-Spectral-Clustering-on-GPU
+Check out the code from https://github.com/yuj-umd/Fast-Spectral-Clustering-on-GPU
 
+```
+$ git clone https://github.com/yuj-umd/Fast-Spectral-Clustering-on-GPU.git
+$ cd arpackpp
+```
 
 ## Usage
 
