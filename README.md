@@ -12,7 +12,7 @@ If you use the software in your applications, please cite the paper as
 
 @inproceedings{jin2016,  
   title={A high performance implementation of spectral clustering on cpu-gpu platforms},  
-  author={Jin, Yu and Jaja, Joseph F},  
+  author={Jin, Yu and JaJa, Joseph F},  
   booktitle={Parallel and Distributed Processing Symposium Workshops, 2016 IEEE International},  
   pages={825--834},  
   year={2016},  
@@ -93,4 +93,4 @@ The Benchmark folder contains Matlab code with the same function. Our implementa
 
 
 ## Reference
-Jin, Yu, and Joseph F. Jaja. "A high performance implementation of spectral clustering on cpu-gpu platforms." Parallel and Distributed Processing Symposium Workshops, 2016 IEEE International. IEEE, 2016.
+Jin, Yu, and Joseph F. JaJa. "A high performance implementation of spectral clustering on cpu-gpu platforms." Parallel and Distributed Processing Symposium Workshops, 2016 IEEE International. IEEE, 2016.
