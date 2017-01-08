@@ -3,7 +3,9 @@
 ## Introduction
 ##
 
-This software package provides a fast implementation of spectral clustering on GPU and CPU platforms. This work is published on IPDPS 2016 workshop titled as "A high performance implementation of spectral clustering on cpu-gpu platforms" authored by Yu Jin and Joseph F. JaJa. 
+This software package provides a fast implementation of spectral clustering on GPU and CPU platforms. 
+
+This work is published on IPDPS 2016 workshop titled as "A high performance implementation of spectral clustering on cpu-gpu platforms" authored by Yu Jin and Joseph F. JaJa. 
 
 If you use the software in your applications, please cite the paper as
 
