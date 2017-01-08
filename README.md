@@ -25,9 +25,10 @@ The implementation contains three parts:
 
 - Construct the graph normalized Laplacian by normalizing the edge weights by the inverse of the corresponding node degrees.
 - Computet the first k eigenvectors based on arpackpp package and CUDA libraries.
-- Apply k-means algorithm on rows of the k eigenvectors. 
+- Apply k-means algorithm on rows of the k eigenvectors. The implementation of k-means algorithm is originally developed by Bran Catanzaro at https://github.com/bryancatanzaro/kmeans
 
 Each part can be easily divided for individual functional usage. 
+
 If you have trouble working with the software package, please contact Yu Jin (yuj AT umd.edu).
 
 
@@ -59,16 +60,31 @@ Check out the code from https://github.com/yuj-umd/fastsc
 
 ```
 $ git clone https://github.com/yuj-umd/fastsc.git
-$ cd arpackpp
+$ cd fastsc
+```
+Modify the arpack library path and cuda architecture in Makefile.
+
+Compile and run the program
+```
+$ make
+$ ./spectral_clustering input_file_name n k output_file_name
 ```
 
 ## Usage
+The software is working by running 
+```
+$ ./spectral_clustering input_file_name n k output_file_name
+```
 
+The input file contains the edge list for the unweighted and undirected graph. 
+Two examples are contained in folder Dataset.
 
 ## Datasets
+FacebookG
 
 
 ## Matlab and Python Benchmarks
+
 
 ## Reference
 Jin, Yu, and Joseph F. Jaja. "A high performance implementation of spectral clustering on cpu-gpu platforms." Parallel and Distributed Processing Symposium Workshops, 2016 IEEE International. IEEE, 2016.
