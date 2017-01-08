@@ -5,7 +5,7 @@
 
 This software package provides a fast implementation of spectral clustering on GPU and CPU platforms. 
 
-This work is published on IPDPS 2016 workshop titled as "A high performance implementation of spectral clustering on cpu-gpu platforms" authored by Yu Jin and Joseph F. JaJa. 
+This work is published on IPDPS 2016 workshop titled as "A high performance implementation of spectral clustering on CPU-GPU platforms" authored by Yu Jin and Joseph F. JaJa. 
 
 If you use the software in your applications, please cite the paper as
 
@@ -21,12 +21,14 @@ If you use the software in your applications, please cite the paper as
 
 
 
-Spectral clustering is one of the most clustering algorithms that can find nonconvex clusters. However, as the algorithm involves computationally expensive numerical operations, i.e. finding the smallest few eigenvectors of a real symmetric matrix, the running time in real applications is long. In this software package, we provides a fast implementation of the spectral clustering algorithm which is significantly faster than other software packages such as . As far as we know, our implementation is the fastest implementation available in the open source community. 
+Spectral clustering is one of the most popular clustering algorithms for finding structural communities in graphs. However, the running time of the algorithm is usually quite long as it involves very expensive numerical operations, i.e. finding the smallest few eigenvectors of a real symmetric matrix. 
+
+In this package, we provides a fast implementation of the spectral clustering algorithm which is significantly faster than other software packages such as Matlab and Python. As far as we know, our implementation is also the fastest implementation available in the open source community. 
 
 The implementation contains three parts:
 
-- Construct the graph normalized Laplacian by normalizing the edge weights by the inverse of the corresponding node degrees.
-- Computet the first k eigenvectors based on arpackpp package and CUDA libraries.
+- Normalize the edge weights by the inverse of the corresponding node degrees.
+- Computet the first k eigenvectors of the normalized Laplacian matrix based on arpackpp package and CUDA libraries.
 - Apply k-means algorithm on rows of the k eigenvectors. The implementation of k-means algorithm is originally developed by Bran Catanzaro at https://github.com/bryancatanzaro/kmeans
 
 Each part can be easily divided for individual functional usage. 
@@ -78,18 +80,16 @@ The program format is
 $ ./spectral_clustering input_file_name n k output_file_name
 ```
 
-The input file contains the graph information represented as edge list.
-By default, the program supports unweighted graphs where each row contains the two node indices. It is easy to adapt the code for weighted graphs and other graph representations. 
+The input file contains the graph information represented as edge list. By default, the program supports unweighted graphs where each row contains two node indices. It is easy to adapt the code for weighted graphs and other graph representations. 
 
-n is the total number of nodes and k is the desired number of clusters.
-The graph nodes are indexed from 0 to n-1 and there are NO isolated nodes.
+n is the total number of nodes and k is the desired number of clusters. The graph nodes are indexed from 0 to n-1 and there are NO isolated nodes.
 
 output file will contain the node ID and the corresponding label.
 
 Two input examples are contained in Dataset folder.
 
 ## Matlab and Python Benchmarks
-The Benchmark folder contains Matlab code with the same function. Our implementation is significantly faster than the naive Matlab implementation especially for large-scale problems. 
+The Benchmark folder contains Matlab code with the same function. Our implementation is faster than the naive Matlab implementation especially for large-scale problems. 
 
 
 ## Reference
