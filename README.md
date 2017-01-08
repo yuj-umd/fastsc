@@ -55,10 +55,10 @@ $ ./install-suitesparse.sh
 Change the directory and library path in Makefile.inc, as instructed in Makefile_example.inc.
 
 ### Spectral clustering installation
-Check out the code from https://github.com/yuj-umd/Fast-Spectral-Clustering-on-GPU
+Check out the code from https://github.com/yuj-umd/fastsc
 
 ```
-$ git clone https://github.com/yuj-umd/Fast-Spectral-Clustering-on-GPU.git
+$ git clone https://github.com/yuj-umd/fastsc.git
 $ cd arpackpp
 ```
 
