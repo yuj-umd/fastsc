@@ -88,7 +88,7 @@ output file will contain the node ID and the corresponding label.
 
 Two input examples are contained in Dataset folder.
 
-## Matlab and Python Benchmarks
+## Benchmarks
 The Benchmark folder contains Matlab code with the same function. Our implementation is faster than the naive Matlab implementation especially for large-scale problems. 
 
 
